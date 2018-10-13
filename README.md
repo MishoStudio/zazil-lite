@@ -52,6 +52,10 @@ One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigi
 
 ## Changelog
 
+#### [Unreleased]
+##### Added
+- New Demo Data sliders. 
+- New Demo Data pages.
 #### [1.0.0] - 2018-10-12  
 ##### Added
 - Initial release.
