@@ -22,7 +22,7 @@ gradients, broken grid layout and mobile first. Give your project a clean, fresh
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-## Installation: Plugins
+### Installation: Plugins
 
 1. Click Begin Installing Plugins on the notice displayed in the welcome page.
 2. Select all plugins and choose Install on Bulk Actions. Click Apply.
@@ -32,7 +32,7 @@ gradients, broken grid layout and mobile first. Give your project a clean, fresh
     4.2 Then Livemesh SiteOrigin Widgets plugin will redirect you to it's Control Panel.    
     4.3 Click Activate All Plugin Widgets, click Save Settings and that's all.
 
-## Installation: Demo Data
+### Installation: Demo Data
 
 1. In your admin panel, go to Appearance > Import Demo Data.
 2. Then click Import Demo Data.
@@ -45,14 +45,18 @@ gradients, broken grid layout and mobile first. Give your project a clean, fresh
 
 ## Frequently Asked Questions
 
-#### Does this theme support any plugins?
+### Does this theme support any plugins?
 
 Zazil Lite includes support for several plugins. Better Font Awesome, Crelly Slider, Livemesh SiteOrigin Widgets,
 One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigin Widgets Bundle.
 
 ## Changelog
 
-#### 1.0.0 - 2018-10-12
+#### [Unreleased]
+##### Added
+- New Demo Data sliders. 
+- New Demo Data pages.
+#### [1.0.0] - 2018-10-12  
 ##### Added
 - Initial release.
 
