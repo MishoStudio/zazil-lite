@@ -1,0 +1,56 @@
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 0.9rem;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+@mixin clearfix-after() {
+  clear: both;
+}
+
+@mixin column-width($numberColumns: 3) {
+  width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin element-shadow {
+  transition: box-shadow 0.5s;
+  -webkit-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+}
+
+@mixin element-shadow-hover {
+  -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+}
+
+@mixin button {
+  @include font-size(1);
+  line-height: 1;
+  color: $color__text-main;
+  background: #e5e5e5;
+  padding: $negative_space;
+  display: inline-block;
+  transition: all 0.5s;
+  border: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+@mixin button-hover {
+  text-decoration: none;
+  background: #ddd;
+}

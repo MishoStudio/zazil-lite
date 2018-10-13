@@ -1,0 +1,11 @@
+/**
+ * Theme Name: Zazil Lite
+ * Author: Misho Studio
+ * Author URI: http://mishostudio.com/
+ *
+ * @package zazil-lite
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}*/

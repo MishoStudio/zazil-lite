@@ -1,0 +1,196 @@
+.widget {
+  margin-bottom: $negative_space;
+
+  select {
+    max-width: 100%;
+  }
+}
+
+aside {
+  .widget {
+    .gallery-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-template-page-fullwidth, .single-download {
+  img {
+    box-shadow: none !important;
+    width: 100%;
+  }
+
+  .site-content {
+    grid-column: auto !important;
+    grid-template-columns: 100% !important;
+
+    .widget {
+      background: inherit !important;
+
+      .widget-title {
+        display: inline-block !important;
+      }
+
+      &:hover .widget-title {
+        -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+        -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+        box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+      }
+    }
+  }
+
+  article {
+    box-shadow: none !important;
+    background: none !important;
+
+    .entry-header {
+      background: none !important;
+      padding: 0 0 $negative_space * 3 0 !important;
+
+      h1 {
+        color: $color__background-site-header;
+      }
+    }
+
+    .entry-footer {
+      margin-top: $negative_space * 3;
+      @include element-shadow();
+
+      .entry-comments-wrapper {
+        position: relative;
+        margin: 0;
+      }
+    }
+
+    .entry-wrapper-content {
+      padding: 0 !important;
+      overflow: visible !important;
+    }
+  }
+
+  .panel-grid {
+    @include element-shadow();
+    background: $color__background-site-header;
+
+    &:hover {
+      @include element-shadow-hover();
+    }
+
+    &.no-shadow, .panel-grid {
+      box-shadow: none;
+    }
+  }
+
+  .widget-title {
+    margin-left: auto !important;
+    margin-top: $negative_space * -2;
+  }
+}
+
+body.no-top-margin .site-content {
+  margin-top: 0 !important;
+}
+
+article.content-masonry {
+  margin: 0;
+}
+
+.grid-item, .grid-sizer {
+  width: 33.3333333333%;
+}
+
+.masonry-one-column {
+  .grid-item, .grid-sizer {
+    width: 100%;
+  }
+}
+
+.grid-item {
+  background: $color__background-pre !important;
+  margin-bottom: 0 !important;
+
+  &.no-post-thumbnail {
+    min-height: 200px;
+    height: auto;
+
+    h3 {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+    }
+  }
+  .container {
+    position: relative;
+    display: block;
+    height: 100%;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      transition: all .5s;
+    }
+
+    a {
+      display: block;
+    }
+
+    h3 {
+      margin: $negative_space * -1 $negative_space $negative_space $negative_space;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 0;
+      font-size: 0;
+      z-index: 10;
+
+      a {
+        display: inline-block;
+        color: $color__background-article !important;
+        background: $color__background-site-footer;
+        padding: $negative_space $negative_space * 2;
+        transition: box-shadow 0.5s;
+        -webkit-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35);
+        font-size: 19.2px;
+        font-size: 1.08rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &:hover {
+    h3 a {
+      -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+.lsow-dark-bg {
+  color: $color__background-article;
+
+  .lsow-testimonials-slider .lsow-testimonial-text,
+  .lsow-testimonials-slider .lsow-testimonial-text i,
+  .lsow-container .lsow-flex-direction-nav a,
+  .lsow-dark-bg .lsow-container .lsow-flex-direction-nav a:hover {
+    color: $color__background-article !important;
+  }
+}
+
+.lsow-container .lsow-flex-direction-nav a,
+.lsow-container .lsow-flex-direction-nav a:hover {
+  font-size: 0;
+  text-decoration: none;
+
+  &:before {
+    @include font-size(1.4);
+    line-height: 1;
+  }
+}

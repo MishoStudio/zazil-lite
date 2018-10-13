@@ -1,0 +1,21 @@
+.gallery {
+  margin-bottom: $negative_space;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: $negative_space * 2;
+
+  @for $i from 2 through 9 {
+    .gallery-columns-#{$i} & {
+      max-width: map-get($columns, $i);
+    }
+  }
+}
+
+.gallery-caption {
+  display: block;
+}

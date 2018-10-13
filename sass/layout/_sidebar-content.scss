@@ -1,0 +1,37 @@
+.site-content {
+  .widget-area {
+    .lsow-flex-direction-nav li {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding: 0;
+      transition: initial;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 0;
+        padding: $negative_space;
+        transition: border-bottom 0.5s;
+
+        &:hover {
+          border-bottom: 1px solid $color__link;
+        }
+
+        a {
+          display: inline-block;
+          padding: 0;
+        }
+      }
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

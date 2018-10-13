@@ -1,0 +1,69 @@
+{
+  "last_tab": "1",
+  "enable-search": "1",
+  "seo-meta-tags": "1",
+  "copyright-text": "\u00a9 Copyright 2018. <a href=\"http:\/\/themes.mishostudio.com\/downloads\/zazil-wordpress-theme\/\" target=\"_blank\">Zazil Lite<\/a> by <a href=\"http:\/\/themes.mishostudio.com\/\" target=\"_blank\">Misho Studio<\/a>.",
+  "custom-css": ".youtube-video iframe {\r\n  width: 100%;\r\n  height: 600px;\r\n}",
+  "custom-code": "",
+  "google-analytics": "",
+  "favicon": {
+    "url": "http:\/\/themes.mishostudio.com\/showcase\/zazil-pro-01\/wp-content\/themes\/zazil-pro\/images\/favicon.ico",
+    "id": "",
+    "height": "",
+    "width": "",
+    "thumbnail": "",
+    "title": "",
+    "caption": "",
+    "alt": "",
+    "description": ""
+  },
+  "logo-image": {
+    "url": "http:\/\/themes.mishostudio.com\/showcase\/zazil-pro-01\/wp-content\/themes\/zazil-pro\/images\/mishostudio.png",
+    "id": "",
+    "height": "",
+    "width": "",
+    "thumbnail": "",
+    "title": "",
+    "caption": "",
+    "alt": "",
+    "description": ""
+  },
+  "scroll_top_button": "1",
+  "opt-color-first-gradient": {
+    "from": "#A80077",
+    "to": "#66FF00"
+  },
+  "opt-color-second-gradient": {
+    "from": "#E2D3F0",
+    "to": "#D6FFBB"
+  },
+  "opt-color-third": "#2F1847",
+  "opt-color-fourth": "#2F1847",
+  "opt-palette-color": "b",
+  "main-font-family": {
+    "font-family": "Open Sans",
+    "font-options": "",
+    "google": "1",
+    "color": "#404040"
+  },
+  "page-title": "Oops! That page can\u2019t be found.",
+  "page-content": "It looks like nothing was found at this location.",
+  "page-enable-search": "1",
+  "social-facebook": "https:\/\/www.facebook.com\/mishostudio\/",
+  "social-twitter": "https:\/\/twitter.com\/mishostudio",
+  "social-instagram": "",
+  "social-linkedin": "",
+  "social-tumblr": "",
+  "social-googleplus": "https:\/\/plus.google.com\/+MishostudioWeb",
+  "social-pinterest": "",
+  "social-youtube": "",
+  "social-flickr": "",
+  "open-link-new-tab": "1",
+  "social-sharing-facebook": "1",
+  "social-sharing-twitter": "1",
+  "social-sharing-linkedin": "1",
+  "social-sharing-tumblr": "1",
+  "social-sharing-googleplus": "1",
+  "social-sharing-pinterest": "1",
+  "redux-backup": "1"
+}

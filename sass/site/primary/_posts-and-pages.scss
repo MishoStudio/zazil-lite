@@ -1,0 +1,452 @@
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 $negative_space * 3;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-header {
+  margin-bottom: $negative_space * 3;
+
+  .page-title {
+    margin-bottom: 0;
+    color: $color__background-article;
+    @include font-size(1.5);
+    line-height: $font__line-height-body;
+  }
+
+  .archive-description {
+    color: $color__background-article;
+    margin-top: $negative_space * 0.5;
+  }
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0;
+  @include font-size(1);
+  line-height: 1;
+  color: $color__text-main;
+  background: #e5e5e5;
+  padding: $negative_space;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+p.attachment a, .gallery-item a {
+  display: inline-block;
+}
+
+article {
+  &.has-post-thumbnail {
+    .entry-wrapper-header {
+      .entry-header {
+        position: absolute;
+        bottom: 0;
+        background: $color__background-article;
+        margin-left: $negative_space * 2.5;
+        width: calc(100% - #{$negative_space * 2.5});
+        padding: $negative_space * 2.5 $negative_space * 5 0 $negative_space * 2.5;
+
+        &:after {
+          bottom: auto;
+          top: 0;
+          margin-left: $negative_space * 2.5;
+        }
+      }
+    }
+
+    .entry-wrapper-content {
+      .entry-content {
+        margin-top: $negative_space * 2;
+      }
+    }
+  }
+
+  &.type-page {
+    .entry-wrapper-content {
+      .entry-content {
+        margin: 0;
+      }
+    }
+  }
+
+  &.sticky {
+    .entry-header {
+      &:after {
+        margin-left: $negative_space * 5;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "STICKY";
+        @include button();
+        @include font-size(0.75);
+        background: $color__background-body !important;
+        color: $color__background-site-header !important;
+        line-height: 1;
+        padding: $negative_space / 2;
+        display: inline-block;
+      }
+    }
+  }
+
+  .entry-header {
+    &:after {
+      display: none;
+    }
+  }
+
+  .entry-wrapper-content {
+    overflow: hidden;
+    padding: 0 $negative_space * 5 $negative_space * 4 $negative_space * 5;
+
+    .entry-content {
+      margin: $negative_space * 3 0 0 0;
+      word-break: normal;
+
+      > p:last-child {
+        margin: 0;
+      }
+
+      .more-link {
+        @include font-size(1);
+        line-height: 1;
+        color: $color__text-main;
+        background: #e5e5e5;
+        padding: $negative_space;
+        display: inline-block;
+        transition: all 0.5s;
+
+        &:hover {
+          text-decoration: none;
+          background: #ddd;
+        }
+      }
+    }
+  }
+
+  .entry-footer {
+    background: #eee;
+    padding: $negative_space * 4 $negative_space * 5 $negative_space * 4 $negative_space * 5;
+    position: relative;
+    word-break: normal;
+
+    .entry-comments-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
+      line-height: 0;
+      margin-top: $negative_space * -1.5;
+      margin-left: $negative_space * 5;
+    }
+
+    .edit-link, .comments-link {
+      display: inline-block;
+
+      a {
+        @include button();
+
+        &:hover {
+          @include button-hover();
+        }
+      }
+    }
+
+    .cat-links, tags-links {
+      display: block;
+    }
+
+    .comments-link {
+      margin-right: $negative_space;
+    }
+  }
+
+  .entry-wrapper-header {
+    position: relative;
+
+    .post-thumbnail {
+      background: $color__background-soft;
+      min-height: $negative_space * 12;
+      display: block;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .entry-date-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: $negative_space * 1.25;
+      margin-top: $negative_space * -1.25;
+      @include element-shadow();
+
+      .posted-on {
+        a {
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $color__background-article;
+          padding: $negative_space / 2 $negative_space;
+          display: inline-block;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .entry-header {
+      background: $color__background-soft;
+      margin-left: 0;
+      width: 100%;
+      padding: $negative_space * 3 $negative_space * 5 $negative_space * 3 $negative_space * 5;
+    }
+  }
+}
+
+.comments-area {
+  background: $color__background-article;
+  margin-bottom: $negative_space * 3;
+  padding-bottom: $negative_space * 5;
+  word-break: normal;
+  @include element-shadow();
+
+  &:hover {
+    @include element-shadow-hover();
+  }
+
+  .navigation {
+    &.posts-navigation, &.post-navigation {
+      overflow: visible;
+    }
+
+    .nav-previous, .nav-next {
+      display: inline-block;
+      width: auto;
+
+      a {
+        @include button();
+
+        &:hover {
+          @include button-hover();
+        }
+      }
+    }
+
+    .nav-links {
+      margin: $negative_space * 3 $negative_space * 5;
+
+      .nav-previous {
+        a {
+          margin-right: $negative_space;
+        }
+      }
+
+      .nav-next {
+        float: none;
+      }
+    }
+  }
+
+  .comments-title {
+    background: $color__background-soft;
+    padding: $negative_space * 3 $negative_space * 5 $negative_space * 3 $negative_space * 5;
+    margin-bottom: 0;
+  }
+
+  .comment-list {
+    list-style: none;
+    margin: $negative_space * 3 $negative_space * 5 0 $negative_space * 5;
+    padding: 0;
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin-left: $negative_space * 2;
+      margin-top: $negative_space;
+    }
+
+    .comment, .pingback {
+      margin-bottom: $negative_space;
+      border: 1px solid #e5e5e5;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .comment-respond {
+        margin: 0;
+        background: $color__background-soft;
+        border-bottom: 1px solid #e5e5e5;
+        padding: $negative_space * 2 $negative_space * 3;
+      }
+
+      article {
+        box-shadow: none !important;
+
+        .reply {
+          margin-left: $negative_space * -1;
+          margin-bottom: $negative_space;
+
+          a {
+            @include button;
+
+            &:hover {
+              @include button-hover();
+            }
+          }
+        }
+
+        .comment-meta {
+          padding: $negative_space;
+          position: relative;
+          background: #eee;
+
+          .comment-author {
+            img {
+              margin-right: $negative_space * 0.5;
+            }
+          }
+
+          .comment-metadata {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            font-size: 0;
+            line-height: 0;
+            margin-bottom: $negative_space * -1.5;
+
+            a {
+              @include button;
+              margin-right: $negative_space;
+              font-size: 12px !important;
+              font-size: .675rem !important;
+              line-height: 1 !important;
+
+              &:hover {
+                @include button-hover();
+              }
+            }
+          }
+        }
+
+        .comment-content {
+          padding: $negative_space * 4 $negative_space;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .pingback {
+      padding: $negative_space;
+      @include font-size(0.75);
+      line-height: $font__line-height-body;
+      position: relative;
+
+      .comment-edit-link {
+        @include button();
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: $negative_space / -2;
+        margin-right: $negative_space;
+        font-size: 12px !important;
+        font-size: .675rem !important;
+        line-height: 1 !important;
+
+        &:hover {
+          @include button_hover();
+        }
+      }
+    }
+  }
+
+  .no-comments {
+    font-style: italic;
+    border: 1px solid #e5e5e5;
+    padding: $negative_space;
+    margin: $negative_space $negative_space * 5 0 $negative_space * 5;
+    @include font-size(0.75);
+    line-height: $font__line-height-body;
+  }
+
+  .comment-respond {
+    padding: $negative_space * 5 $negative_space * 5 0 $negative_space * 5;
+
+    .comment-reply-title {
+      position: relative;
+
+      #cancel-comment-reply-link {
+        @include button();
+        font-size: 12px !important;
+        font-size: 0.675rem !important;
+        line-height: 1 !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover {
+          @include button-hover();
+        }
+      }
+    }
+
+    .form-submit {
+      margin: 0;
+    }
+  }
+}
+
+.page {
+  .entry-title {
+    margin-bottom: 0;
+  }
+
+  .entry-wrapper-content {
+    padding-top: $negative_space * 4;
+  }
+
+  .site-content {
+    margin-top: $negative_space * 8;
+  }
+}
+
+.search-results {
+  .entry-wrapper-content {
+    padding-top: 0;
+  }
+}
+
+.page-template-page-fullwidth article .entry-wrapper-header .post-thumbnail {
+  margin-bottom: $negative_space * 3;
+  transition: box-shadow 0.5s !important;
+  -webkit-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35) !important;
+  -moz-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.35) !important;
+  background: $color__background-site-header !important;
+
+  &:hover {
+    -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+    -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35) !important;
+  }
+}

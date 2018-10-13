@@ -1,0 +1,21 @@
+@import "buttons";
+@import "fields";
+
+.comment-form {
+  p {
+    input {
+      display: block;
+      width: 100%;
+
+      &.submit {
+        width: auto;
+        margin-bottom: $negative_space;
+      }
+    }
+
+    &.comment-form-comment {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}

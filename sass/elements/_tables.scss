@@ -1,0 +1,22 @@
+table {
+  margin: 0 0 $negative_space;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+
+  caption {
+    margin-bottom: $negative_space;
+  }
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: $negative_space;
+}
+
+table#wp-calendar, #wp-calendar th, #wp-calendar td {
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+ul, ol {
+  margin-left: $negative_space;
+  padding-left: $negative_space * 2;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul li, ol li {
+  margin-bottom: $negative_space / 3;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: $negative_space / 3;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: $negative_space;
+}
+
+dl {
+  margin: 0 0 $negative_space;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 $negative_space $negative_space;
+}

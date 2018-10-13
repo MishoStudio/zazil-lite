@@ -1,0 +1,130 @@
+/**
+ * Theme Name: Zazil Lite
+ * Author: Misho Studio
+ * Author URI: http://mishostudio.com/
+ *
+ * @package zazil-lite
+ */
+.misho-features td {
+	display: table-cell !important;
+}
+
+.misho-about .hndle {
+	cursor: auto !important;
+}
+
+.misho-about .inside img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.misho-about table.go-pro p {
+	margin: 0;
+}
+
+.misho-about table.go-pro a i {
+	text-decoration: underline;
+}
+
+.misho-about table.go-pro td {
+	vertical-align: middle;
+}
+
+.misho-about .misho-table {
+	margin-bottom: 20px;
+}
+
+:target {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
+
+.misho-about ol {
+	counter-reset: item
+}
+
+.misho-about li {
+	display: block
+}
+
+.misho-about li:before {
+	content: counters(item, ".") ". ";
+	counter-increment: item
+}
+
+.misho-about .misho-gradient {
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.misho-about .misho-gradient a {
+	display: inline-block;
+}
+
+.misho-about .misho-gradient img {
+	width: auto;
+}
+
+li.upgrade-button, .misho-about .misho-gradient {
+	background: linear-gradient(-45deg, #22C1C3, #FDBB2D, #FC00FF, #00DBDE) !important;
+	background-size: 400% 400% !important;
+	-webkit-animation: Gradient 15s ease infinite !important;
+	-moz-animation: Gradient 15s ease infinite !important;
+	animation: Gradient 15s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.misho-about .misho-description br {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	:target {
+		top: -60px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	:target {
+		top: 0;
+	}
+}

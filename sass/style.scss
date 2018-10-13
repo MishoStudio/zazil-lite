@@ -1,0 +1,91 @@
+/*!
+Theme Name: Zazil Lite
+Theme URI: http://themes.mishostudio.com/downloads/zazil-wordpress-theme/
+Author: Misho Studio
+Author URI: http://themes.mishostudio.com/
+Description: Zazil is a new multipurpose theme that makes use of the latest design trends: bright and vivid colors, gradients, broken grid layout and mobile first. Give your project a clean, fresh and renewed image.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zazil-lite
+Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, blog, entertainment
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Gradients
+--------------------------------------------------------------*/
+@import "elements/gradients";
+
+/*--------------------------------------------------------------
+# EDD
+--------------------------------------------------------------*/
+@import "elements/edd";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+@import "site/secondary/widgets-siteorigin";
+@import "site/secondary/widgets-livemesh";
+@import "site/secondary/widgets-codelights";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";

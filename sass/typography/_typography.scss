@@ -1,0 +1,40 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  @include font-size(1);
+  line-height: $font__line-height-body;
+}
+
+@import "headings";
+
+@import "copy";
+
+.entry-title,
+.entry-title a,
+.entry-title a:visited,
+.entry-title a:hover {
+  text-decoration: none;
+  @include font-size(2.5);
+  line-height: $font__line-height-body - 0.2;
+}
+
+.entry-meta,
+.entry-footer {
+  text-transform: uppercase;
+  @include font-size(0.75);
+  line-height: $font__line-height-body;
+}
+
+.site-title {
+  @include font-size(1);
+  line-height: 1;
+  margin-bottom: $negative_space / 4;
+
+  a {
+    text-transform: uppercase;
+    font-style: normal;
+  }
+}

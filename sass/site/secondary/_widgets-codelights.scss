@@ -1,0 +1,50 @@
+.cl-ib.animation_hebe {
+  .cl-ib-desc {
+    @include font-size(1);
+    line-height: $font__line-height-body;
+    margin-top: $negative-space;
+  }
+}
+
+.cl-btn {
+  margin: 0 !important;
+  padding: $negative-space !important;
+}
+
+.cl-ib-title {
+  line-height: 1 !important;
+}
+
+.cl-review.layout_clean {
+  .cl-review-quote-text, .cl-review-author {
+    padding-left: $negative-space !important;
+  }
+
+  .cl-review-author {
+    padding-top: $negative-space;
+
+    .cl-review-author-avatar {
+      margin-right: $negative-space;
+    }
+  }
+}
+
+.widget {
+  .cl-itext {
+    margin: 0 0 $negative-space 0;
+    @include font-size(1.8);
+    line-height: 1;
+  }
+}
+
+.cl-flipbox {
+  .cl-flipbox-front-title, .cl-flipbox-back-title {
+    @include font-size(1.4);
+    line-height: 1;
+  }
+
+  .cl-flipbox-front-desc, .cl-flipbox-back-desc {
+    line-height: $font__line-height-body;
+    margin: 0 0 $negative-space !important;
+  }
+}
