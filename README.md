@@ -1,6 +1,6 @@
 # Zazil Lite
 
-Author: Misho Studio
+Author: Misho Studio  
 Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header,
 custom-menu, custom-logo, featured-image-header, featured-images, full-width-template, sticky-post, theme-options,
 threaded-comments, blog, entertainment
