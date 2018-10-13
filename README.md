@@ -41,7 +41,7 @@ gradients, broken grid layout and mobile first. Give your project a clean, fresh
 5. Go to Settings > Reading choose A Static Page on Your Homepage Displays.
 6. Set Home for Homepage and Blog for Posts Page and that's all.
 
-**Note: Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.**
+*Note: Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.*
 
 ## Frequently Asked Questions
 
