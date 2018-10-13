@@ -6,7 +6,7 @@ custom-menu, custom-logo, featured-image-header, featured-images, full-width-tem
 threaded-comments, blog, entertainment
 
 - Requires at least: 4.0
-- Tested up to: 4.9.6
+- Tested up to: 4.9.8
 - Stable version: 1.0.0
 - License: GNU General Public License v2 or later
 - License URI: LICENSE
