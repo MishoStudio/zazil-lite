@@ -27,9 +27,9 @@ gradients, broken grid layout and mobile first. Give your project a clean, fresh
 1. Click Begin Installing Plugins on the notice displayed in the welcome page.
 2. Select all plugins and choose Install on Bulk Actions. Click Apply.
 3. After install click Return to Required Plugins Installer.
-4. Select all plugins and choose Activate on Bulk Actions. Click Apply.
-    4.1 After activation, Livemesh SiteOrigin Widgets plugin will ask you for tracking data. Choose any.
-    4.2 Then Livemesh SiteOrigin Widgets plugin will redirect you to it's Control Panel.
+4. Select all plugins and choose Activate on Bulk Actions. Click Apply.    
+    4.1 After activation, Livemesh SiteOrigin Widgets plugin will ask you for tracking data. Choose any.    
+    4.2 Then Livemesh SiteOrigin Widgets plugin will redirect you to it's Control Panel.    
     4.3 Click Activate All Plugin Widgets, click Save Settings and that's all.
 
 ## Installation: Demo Data
@@ -52,8 +52,8 @@ One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigi
 
 ## Changelog
 
-### 1.0.0 - 2018-10-12
-### Added
+#### 1.0.0 - 2018-10-12
+##### Added
 - Initial release.
 
 ## Credits
