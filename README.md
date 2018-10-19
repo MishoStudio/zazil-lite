@@ -7,7 +7,7 @@ threaded-comments, blog, entertainment
 
 - Requires at least: 4.0
 - Tested up to: 4.9.8
-- Stable version: 1.0.0
+- Stable version: 1.0.1
 - License: GNU General Public License v2 or later
 - License URI: LICENSE
 
@@ -56,6 +56,10 @@ One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigi
 ##### Added
 - New Demo Data sliders. 
 - New Demo Data pages.
+#### [1.0.1] - 2018-10-18  
+##### Added
+- Livemesh widgets compatibility updated.
+- README updated.
 #### [1.0.0] - 2018-10-12  
 ##### Added
 - Initial release.

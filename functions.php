@@ -225,16 +225,18 @@ function about_theme() { ?>
                 <h2 class="hndle"><span>Installation: Demo Data</span></h2>
                 <div class="inside">
                     <ol>
-                        <li>In your admin panel, go to Appearance > Import Demo Data.
-                        </li>
+                        <li>In your admin panel, go to Appearance > Import Demo Data.</li>
                         <li>Then click Import Demo Data.</li>
                         <li>Go to Crelly Slider and click Import Slider.</li>
                         <li>Select the slider you need according to the demo that you selected.</li>
                         <li>Go to Settings > Reading choose A Static Page on Your Homepage Displays.</li>
                         <li>Set Home for Homepage and Blog for Posts Page and that's all.</li>
+                    </ol>
 
-                        <p><i><b>Note:</b> Images shown in the previews are not included in the Demo Data for protecting
-                                against Copyright issues.</i></p>
+                    <b>Notes:</b>
+                    <ol>
+                        <li><i>Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.</i></li>
+                        <li><i>Download sliders (if not included) from our repository: <a target="_blank" href="https://github.com/MishoStudio/zazil-lite-sliders">https://github.com/MishoStudio/zazil-lite-sliders</a> </i></li>
                     </ol>
                 </div>
             </div>
