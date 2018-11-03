@@ -46,10 +46,14 @@ Zazil Lite WordPress Theme, Copyright 2018 WordPress.org Zazil Lite is distribut
 
 Zazil Lite bundles the following third-party resources:
 
-- Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-- normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-- jquery.masonry.js https://github.com/desandro/masonry, (C) 2010-2018 David DeSandro, [MIT](https://opensource.org/licenses/MIT)
-- jquery.waypoints.js https://github.com/imakewebthings/waypoints, (C) 2011-2016 Caleb Troughton, [MIT](https://opensource.org/licenses/MIT)
+- Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.,
+[GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal.
+* [MIT](https://opensource.org/licenses/MIT)
+- jquery.masonry.js https://github.com/desandro/masonry, (C) 2010-2018 David DeSandro.
+* [MIT](https://opensource.org/licenses/MIT)
+- jquery.waypoints.js https://github.com/imakewebthings/waypoints, (C) 2011-2016 Caleb Troughton.
+* [MIT](https://opensource.org/licenses/MIT)
 
 == Frequently Asked Questions ==
 
