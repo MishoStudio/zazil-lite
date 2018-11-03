@@ -53,8 +53,8 @@ Zazil Lite bundles the following third-party resources:
 
 == Frequently Asked Questions ==
 
-* Does this theme support any plugins?
-- Zazil Lite includes support for several plugins. Better Font Awesome, Crelly Slider, Livemesh SiteOrigin Widgets, One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigin Widgets Bundle.
+- Does this theme support any plugins?
+* Zazil Lite includes support for several plugins. Better Font Awesome, Crelly Slider, Livemesh SiteOrigin Widgets, One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigin Widgets Bundle.
 
 == Changelog ==
 
