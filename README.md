@@ -1,6 +1,6 @@
 # Zazil Lite
 
-Author: Misho Studio  
+Contributors: @mishostudio 
 Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header,
 custom-menu, custom-logo, featured-image-header, featured-images, full-width-template, sticky-post, theme-options,
 threaded-comments, blog, entertainment
@@ -64,7 +64,11 @@ One Click Demo Import, Page Builder by SiteOrigin, Redux Framework and SiteOrigi
 ##### Added
 - Initial release.
 
-## Credits
+## Copyright
+
+Zazil Lite WordPress Theme, Copyright 2018 WordPress.org Zazil Lite is distributed under the terms of the GNU GPL.
+
+Zazil Lite bundles the following third-party resources:
 
 - Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 - normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
