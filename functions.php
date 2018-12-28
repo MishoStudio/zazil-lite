@@ -46,7 +46,7 @@ function zazil_lite_widgets_init() {
 add_action( 'widgets_init', 'zazil_lite_widgets_init' );
 
 function zazil_lite_scripts() {
-    wp_enqueue_style( 'zazil-lite-font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css', array(), '5.0.10', 'all' );
+    wp_enqueue_style( 'zazil-lite-font-awesome', get_template_directory_uri() . '/css/fontawesome.css', array(), '5.0.10', 'all' );
 	wp_enqueue_style( 'zazil-lite-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'zazil-lite-navigation', get_template_directory_uri() . '/js/navigation.js', false, '20151215', true );
 	wp_enqueue_script( 'zazil-lite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', false, '20151215', true );
@@ -59,59 +59,47 @@ function zazil_lite_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'zazil_lite_scripts' );
 
-function admin_styles() {
-    wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css', array(), '1.0.0', 'all');
+function zazil_lite_admin_styles() {
+    wp_enqueue_style( 'zazil-lite-admin-styles', get_template_directory_uri().'/admin.css', array(), '1.0.0', 'all' );
 }
-add_action('admin_enqueue_scripts', 'admin_styles');
-
-function prefix_remove_section( $wp_customize ) {
-    $wp_customize->remove_section( 'custom_css' );
-    $wp_customize->remove_section('colors');
-    $wp_customize->remove_section('background_image');
-    $wp_customize->remove_section('header_image');
-    $wp_customize->remove_control('site_icon');
-    $wp_customize->remove_control('display_header_text');
-
-    $wp_customize->get_section('title_tagline')->priority = 1;
-}
-add_action( 'customize_register', 'prefix_remove_section', 15 );
+add_action( 'admin_enqueue_scripts', 'zazil_lite_admin_styles' );
 
 function zazil_lite_register_required_plugins() {
     $plugins = array(
         array(
             'name'      => 'Redux Framework',
             'slug'      => 'redux-framework',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Page Builder by SiteOrigin',
             'slug'      => 'siteorigin-panels',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'SiteOrigin Widgets Bundle',
             'slug'      => 'so-widgets-bundle',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Livemesh SiteOrigin Widgets',
             'slug'      => 'livemesh-siteorigin-widgets',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Crelly Slider',
             'slug'      => 'crelly-slider',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'Better Font Awesome',
             'slug'      => 'better-font-awesome',
-            'required'  => true,
+            'required'  => false,
         ),
         array(
             'name'      => 'One Click Demo Import',
             'slug'      => 'one-click-demo-import',
-            'required'  => true,
+            'required'  => false,
         ),
     );
 
@@ -148,12 +136,12 @@ if ( ! function_exists( 'remove_demo' ) ) {
 }
 add_action( 'redux/loaded', 'remove_demo' );
 
-function override_redux_message() {
-    update_option( 'ReduxFrameworkPlugin_ACTIVATED_NOTICES', []);
+function zazil_lite_override_redux_message() {
+    update_option( 'ReduxFrameworkPlugin_ACTIVATED_NOTICES', [] );
 }
-add_action('admin_init', 'override_redux_message', 30);
+add_action( 'admin_init', 'zazil_lite_override_redux_message', 30 );
 
-function upgrade_button( $wp_admin_bar ) {
+function zazil_lite_upgrade_button( $wp_admin_bar ) {
     $args = array(
         'id' => 'upgrade-button',
         'title' => __( 'Upgrade Theme', 'zazil-lite' ),
@@ -163,24 +151,24 @@ function upgrade_button( $wp_admin_bar ) {
             'target' => '_blank'
         )
     );
-    $wp_admin_bar->add_node($args);
+    $wp_admin_bar->add_node( $args );
 }
-add_action('admin_bar_menu', 'upgrade_button', 500);
+add_action( 'admin_bar_menu', 'zazil_lite_upgrade_button', 500 );
 
-function about_theme() { ?>
+function zazil_lite_about_theme() { ?>
     <div class="wrap misho-about">
-        <h1 class="wp-heading-inline">Zazil Lite by Misho Studio</h1>
+        <h1 class="wp-heading-inline"><?php esc_html_e( 'Zazil Lite by Misho Studio', 'zazil-lite' ); ?></h1>
         <div id="poststuff">
             <table class="wp-list-table widefat go-pro misho-table">
                 <tbody>
                 <tr>
                     <td>
                         <p>
-                            <b>Need more options?, Want to support us?, Need technical support? Upgrade your theme now and get a special discount price. <a href="#zazil-prices"><i>Check all the features</i></a>.</b>
+                            <b><?php esc_html_e( 'Need more options?, Want to support us?, Need technical support? Upgrade your theme now and get a special discount price.', 'zazil-lite' ); ?> <a href="#zazil-prices"><i><?php esc_html_e( 'Check all the features', 'zazil-lite' ); ?></i></a>.</b>
                         </p>
                     </td>
                     <td style="text-align: right">
-                        <a href="http://themes.mishostudio.com/downloads/zazil-wordpress-theme/?version=pro" target="_blank" class="button button-primary button-large">Claim your discount!</a>
+                        <a href="http://themes.mishostudio.com/downloads/zazil-wordpress-theme/?version=pro" target="_blank" class="button button-primary button-large"><?php esc_html_e( 'Claim your discount!', 'zazil-lite' ); ?></a>
                     </td>
                 </tr>
                 </tbody>
@@ -197,51 +185,52 @@ function about_theme() { ?>
                 </div>
             </div>
             <div class="postbox misho-description">
-                <h2 class="hndle"><span>Description</span></h2>
+                <h2 class="hndle"><span><?php esc_html_e( 'Description', 'zazil-lite' ); ?></span></h2>
                 <div class="inside">
-                    <p> Zazil is a new multipurpose theme that makes use of the latest design trends: bright and vivid
-                        colors, gradients, broken grid layout and mobile first.<br/> Just download, customize and go.
-                        Create each part of your website using an intuitive interface without the need to write a single
-                        line of code. <br/>Give your project a clean, fresh and renewed image.</p>
+                    <p>
+                       <?php esc_html_e( 'Zazil is a new multipurpose theme that makes use of the latest design trends: bright and vivid, colors, gradients, broken grid layout and mobile first.', 'zazil-lite' ); ?><br/>
+                       <?php esc_html_e( ' Just download, customize and go. Create each part of your website using an intuitive interface without the need to write a single line of code.', 'zazil-lite' ); ?><br/>
+                       <?php esc_html_e( 'Give your project a clean, fresh and renewed image.', 'zazil-lite' ); ?>
+                    </p>
                 </div>
             </div>
             <div class="postbox">
-                <h2 class="hndle"><span>Installation: Plugins</span></h2>
+                <h2 class="hndle"><span><?php esc_html_e( 'Installation: Plugins', 'zazil-lite' ); ?></span></h2>
                 <div class="inside">
                     <ol>
-                        <li>Click Begin Installing Plugins on the notice displayed in the welcome page.</li>
-                        <li>Select all plugins and choose Install on Bulk Actions. Click Apply.</li>
-                        <li>After install click Return to Required Plugins Installer.</li>
-                        <li>Select all plugins and choose Activate on Bulk Actions. Click Apply.</li>
+                        <li><?php esc_html_e( 'Click Begin Installing Plugins on the notice displayed in the welcome page.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Select all plugins and choose Install on Bulk Actions. Click Apply.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'After install click Return to Required Plugins Installer.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Select all plugins and choose Activate on Bulk Actions. Click Apply.', 'zazil-lite' ); ?></li>
                         <ol>
-                            <li>After activation, Livemesh SiteOrigin Widgets plugin will ask you for tracking data. Choose any.</li>
-                            <li>Then Livemesh SiteOrigin Widgets plugin will redirect you to its Control Panel.</li>
-                            <li>Click Activate All Plugin Widgets, click Save Settings and that's all.</li>
+                            <li><?php esc_html_e( 'After activation, Livemesh SiteOrigin Widgets plugin will ask you for tracking data. Choose any.', 'zazil-lite' ); ?></li>
+                            <li><?php esc_html_e( 'Then Livemesh SiteOrigin Widgets plugin will redirect you to its Control Panel.', 'zazil-lite' ); ?></li>
+                            <li><?php esc_html_e( 'Click Activate All Plugin Widgets, click Save Settings and that\'s all.', 'zazil-lite' ); ?></li>
                         </ol>
                     </ol>
                 </div>
             </div>
             <div class="postbox">
-                <h2 class="hndle"><span>Installation: Demo Data</span></h2>
+                <h2 class="hndle"><span><?php esc_html_e( 'Installation: Demo Data', 'zazil-lite' ); ?></span></h2>
                 <div class="inside">
                     <ol>
-                        <li>In your admin panel, go to Appearance > Import Demo Data.</li>
-                        <li>Then click Import Demo Data.</li>
-                        <li>Go to Crelly Slider and click Import Slider.</li>
-                        <li>Select the slider you need according to the demo that you selected.</li>
-                        <li>Go to Settings > Reading choose A Static Page on Your Homepage Displays.</li>
-                        <li>Set Home for Homepage and Blog for Posts Page and that's all.</li>
+                        <li><?php esc_html_e( 'In your admin panel, go to Appearance > Import Demo Data.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Then click Import Demo Data.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Go to Crelly Slider and click Import Slider.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Select the slider you need according to the demo that you selected.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Go to Settings > Reading choose A Static Page on Your Homepage Displays.', 'zazil-lite' ); ?></li>
+                        <li><?php esc_html_e( 'Set Home for Homepage and Blog for Posts Page and that\'s all.', 'zazil-lite' ); ?></li>
                     </ol>
 
-                    <b>Notes:</b>
+                    <b><?php esc_html_e( 'Notes:', 'zazil-lite' ); ?></b>
                     <ol>
-                        <li><i>Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.</i></li>
-                        <li><i>Download sliders (if not included) from our repository: <a target="_blank" href="https://github.com/MishoStudio/zazil-lite-sliders">https://github.com/MishoStudio/zazil-lite-sliders</a> </i></li>
+                        <li><i><?php esc_html_e( 'Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.', 'zazil-lite' ); ?></i></li>
+                        <li><i><?php esc_html_e( 'Download sliders (if not included) from our repository: ', 'zazil-lite' ); ?><a target="_blank" href="https://github.com/MishoStudio/zazil-lite-sliders"><?php esc_html_e( 'https://github.com/MishoStudio/zazil-lite-sliders', 'zazil-lite' ); ?></a></i></li>
                     </ol>
                 </div>
             </div>
             <div class="postbox">
-                <h2 class="hndle"><span>Installation Video</span></h2>
+                <h2 class="hndle"><span><?php esc_html_e( 'Installation Video', 'zazil-lite' ); ?></span></h2>
                 <div class="inside">
                     <p>
                         <iframe width="100%" height="600px"
@@ -254,167 +243,167 @@ function about_theme() { ?>
             <table class="wp-list-table widefat striped misho-features">
                 <thead>
                 <tr>
-                    <th style="padding: 0"><h2>Features</h2></th>
-                    <th style="padding: 0; text-align: center" width="15%"><h2>Lite</h2></th>
-                    <th style="padding: 0; text-align: center" width="15%"><h2>PRO</h2></th>
+                    <th style="padding: 0"><h2><?php esc_html_e( 'Features', 'zazil-lite' ); ?></h2></th>
+                    <th style="padding: 0; text-align: center" width="15%"><h2><?php esc_html_e( 'Lite', 'zazil-lite' ); ?></h2></th>
+                    <th style="padding: 0; text-align: center" width="15%"><h2><?php esc_html_e( 'PRO', 'zazil-lite' ); ?></h2></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                        <b>Enable Search</b><br>
-                        Enable or disable default search form.
+                        <b><?php esc_html_e( 'Enable Search', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Enable or disable default search form.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>SEO - Echo Meta Tags</b><br>
-                        Zazil Theme generates it's own SEO meta tags.
+                        <b><?php esc_html_e( 'SEO - Echo Meta Tags', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Zazil Theme generates it\'s own SEO meta tags.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Copyright Text</b><br>
-                        Customize footer text.
+                        <b><?php esc_html_e( 'Copyright Text', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Customize footer text.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Custom CSS</b><br>
-                        Enter your custom CSS code.
+                        <b><?php esc_html_e( 'Custom CSS', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Enter your custom CSS code.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Custom Code</b><br>
-                        Enter your custom JavaScript code.
+                        <b><?php esc_html_e( 'Custom Code', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Enter your custom JavaScript code.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Google Analytics</b><br>
-                        Enter your Google Analytics tracking code.
+                        <b><?php esc_html_e( 'Google Analytics', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Enter your Google Analytics tracking code.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Favicon</b><br>
-                        Upload your favicon (.ico)
+                        <b><?php esc_html_e( 'Favicon', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Upload your favicon (.ico)', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Logo Image</b><br>
-                        Upload your logo.
+                        <b><?php esc_html_e( 'Logo Image', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Upload your logo.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Scroll Top Button</b><br>
-                        Enable Scroll Top button.
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Custom Color Selection</b><br>
-                        Colorize your theme with any color.
+                        <b><?php esc_html_e( 'Scroll Top Button', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Enable Scroll Top button.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>5+ Palette Colors</b><br>
-                        Up to ten color palettes to choose from.
+                        <b><?php esc_html_e( 'Custom Color Selection', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Colorize your theme with any color.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Google Fonts</b><br>
-                        Dozens of fonts in any color.
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Custom Error Page</b><br>
-                        Publish your own error message.
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>3+ Social Accounts Links</b><br>
-                        Up to nine social accounts to choose from.
+                        <b><?php esc_html_e( '5+ Palette Colors', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Up to ten color palettes to choose from.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>2+ Social Sharing Buttons</b><br>
-                        Up to six social share buttons to choose from.
+                        <b><?php esc_html_e( 'Google Fonts', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Dozens of fonts in any color.', 'zazil-lite' ); ?>
+                    </td>
+                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
+                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b><?php esc_html_e( 'Custom Error Page', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Publish your own error message.', 'zazil-lite' ); ?>
+                    </td>
+                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
+                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b><?php esc_html_e( '3+ Social Accounts Links', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Up to nine social accounts to choose from.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>60+ Widgets</b><br>
-                        More than sixty widgets to choose from.
+                        <b><?php esc_html_e( '2+ Social Sharing Buttons', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Up to six social share buttons to choose from.', 'zazil-lite' ); ?>
+                    </td>
+                    <td style="text-align: center"><span class="dashicons dashicons-no-alt"></span></td>
+                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b><?php esc_html_e( '60+ Widgets', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'More than sixty widgets to choose from.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>One Click Install</b><br>
-                        Install any of our demos with just one click.
+                        <b><?php esc_html_e( 'One Click Install', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Install any of our demos with just one click.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Control Panel</b><br>
-                        Customize your website using an intuitive interface.
+                        <b><?php esc_html_e( 'Control Panel', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'Customize your website using an intuitive interface.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td>
-                        <b>Page Builder</b><br>
-                        You just need to drag and drop.
+                        <b><?php esc_html_e( 'Page Builder', 'zazil-lite' ); ?></b><br>
+                        <?php esc_html_e( 'You just need to drag and drop.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                 </tr>
                 <tr>
                     <td style="text-align: right" colspan="3">
-                        <a href="http://themes.mishostudio.com/downloads/zazil-wordpress-theme/?version=pro" target="_blank" class="button button-primary button-large">Claim your discount!</a>
+                        <a href="http://themes.mishostudio.com/downloads/zazil-wordpress-theme/?version=pro" target="_blank" class="button button-primary button-large"><?php esc_html_e( 'Claim your discount!', 'zazil-lite' ); ?></a>
                     </td>
                 </tr>
                 </tbody>
@@ -423,9 +412,9 @@ function about_theme() { ?>
     </div>
     <?php
 }
-add_action('admin_menu', 'about_theme_menu');
+add_action( 'admin_menu', 'zazil_lite_about_theme_menu' );
 
-function ocdi_import_files() {
+function zazil_lite_ocdi_import_files() {
     return array(
         array(
             'import_file_name'             => 'Demo One',
@@ -443,19 +432,19 @@ function ocdi_import_files() {
         ),
     );
 }
-add_filter( 'pt-ocdi/import_files', 'ocdi_import_files' );
+add_filter( 'pt-ocdi/import_files', 'zazil_lite_ocdi_import_files' );
 
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 
-function about_theme_menu() {
-    add_theme_page('Zazil Lite by Misho Studio', 'About Zazil Lite', 'edit_theme_options', 'about-theme', 'about_theme');
+function zazil_lite_about_theme_menu() {
+    add_theme_page( 'Zazil Lite by Misho Studio', 'About Zazil Lite', 'edit_theme_options', 'about-theme', 'zazil_lite_about_theme' );
 }
 
 if ( is_admin() && isset( $_GET['activated'] ) ){
     wp_redirect( admin_url( "themes.php?page=about-theme" ) );
 }
 
-require_once (dirname(__FILE__) . '/template-options/template-options.php');
+require_once ( dirname(__FILE__) . '/template-options/template-options.php' );
 require_once get_template_directory() . '/tgm-plugin-activation.php';
 
 require get_template_directory() . '/inc/template-tags.php';
