@@ -122,16 +122,6 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __( 'Google Analytics tracking code.', 'zazil-lite' ),
         ),
         array(
-            'id'       => 'favicon',
-            'type'     => 'media',
-            'url'      => true,
-            'title'    => __( 'Favicon', 'zazil-lite' ),
-            'compiler' => 'true',
-            'mode'      => 'x-icon',
-            'subtitle' => __( 'Upload favicon (.ico)', 'zazil-lite' ),
-            'default'  => array( 'url' => get_template_directory_uri() . '/images/favicon.ico' ),
-        ),
-        array(
             'id'       => 'logo-image',
             'type'     => 'media',
             'url'      => true,
