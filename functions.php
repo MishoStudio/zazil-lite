@@ -46,7 +46,7 @@ function zazil_lite_widgets_init() {
 add_action( 'widgets_init', 'zazil_lite_widgets_init' );
 
 function zazil_lite_scripts() {
-    wp_enqueue_style( 'zazil-lite-font-awesome', get_template_directory_uri() . '/css/fontawesome.css', array(), '5.0.10', 'all' );
+    wp_enqueue_style( 'zazil-lite-font-awesome', get_template_directory_uri() . '/webfonts/all.css', array(), '5.0.10', 'all' );
 	wp_enqueue_style( 'zazil-lite-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'zazil-lite-navigation', get_template_directory_uri() . '/js/navigation.js', false, '20151215', true );
 	wp_enqueue_script( 'zazil-lite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', false, '20151215', true );
