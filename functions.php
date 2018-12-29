@@ -394,7 +394,6 @@ function zazil_lite_styles() {
         background: #eeeeee;
         }
         }";
-
     wp_add_inline_style( 'zazil-lite-style', $inline_css );
 }
 add_action( 'wp_enqueue_scripts', 'zazil_lite_styles' );
