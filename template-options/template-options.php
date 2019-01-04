@@ -129,6 +129,7 @@ Redux::setSection( $opt_name, array(
             'type'     => 'textarea',
             'title'    => __( 'Google Analytics', 'zazil-lite' ),
             'subtitle' => __( 'Google Analytics tracking code.', 'zazil-lite' ),
+            'default'  => '',
         ),
     )
 ) );

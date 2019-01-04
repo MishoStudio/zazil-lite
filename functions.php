@@ -459,8 +459,8 @@ function zazil_lite_register_required_plugins() {
 }
 add_action( 'tgmpa_register', 'zazil_lite_register_required_plugins' );
 
-if ( ! function_exists( 'remove_demo' ) ) {
-    function remove_demo() {
+if ( ! function_exists( 'zazil_lite_remove_demo' ) ) {
+    function zazil_lite_remove_demo() {
         // Used to hide the demo mode link from the plugin page. Only used when Redux is a plugin.
         if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
             remove_filter( 'plugin_row_meta', array(
@@ -473,7 +473,7 @@ if ( ! function_exists( 'remove_demo' ) ) {
         }
     }
 }
-add_action( 'redux/loaded', 'remove_demo' );
+add_action( 'redux/loaded', 'zazil_lite_remove_demo' );
 
 function zazil_lite_override_redux_message() {
     update_option( 'ReduxFrameworkPlugin_ACTIVATED_NOTICES', [] );
