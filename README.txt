@@ -48,6 +48,9 @@ Note: Images shown in the previews are not included in the Demo Data for protect
 * New Demo Data sliders
 * New Demo Data pages
 
+= 1.0.2 [2019-01-04] =
+* Theme Review Team requirements updated
+
 = 1.0.1 [2018-10-18] =
 * Livemesh widgets compatibility updated
 * README updated
