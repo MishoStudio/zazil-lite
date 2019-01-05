@@ -76,7 +76,7 @@ global $misho_opt; ?>
                         <button class="social-search-toggle" aria-expanded="false">
                             <i class="fas fa-heart"></i>
                         </button>
-                        <div class="container">
+                        <div class="container social">
                             <?php
                             if ( $misho_opt[ 'open-link-new-tab' ] == true ) {
                                 $open_link_new_tab = ' target="_blank"';

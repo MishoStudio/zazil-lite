@@ -172,14 +172,19 @@
         }
       }
 
+      .social {
+        max-width: $negative_space * 20!important;
+      }
+
       .container {
         float: right;
+        text-align: right;
         position: absolute;
         top: 100%;
         right: -999rem;
         z-index: 999;
         background: $color__background-soft;
-        width: $negative_space * 25;
+        width: $negative_space * 20;
         @include element-shadow-hover();
 
         a {

@@ -770,14 +770,17 @@ a:hover, a:active {
       font-size: 17.6px;
       font-size: 0.99rem;
       line-height: 2.5 !important; }
+  .main-navigation .buttons-container li .social {
+    max-width: 16rem !important; }
   .main-navigation .buttons-container li .container {
     float: right;
+    text-align: right;
     position: absolute;
     top: 100%;
     right: -999rem;
     z-index: 999;
     background: #eee;
-    width: 20rem;
+    width: 16rem;
     -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
     box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35); }
