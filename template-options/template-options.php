@@ -112,15 +112,8 @@ Redux::setArgs( $opt_name, $args );
 Redux::setSection( $opt_name, array(
     'title'      => __( 'General', 'zazil-lite' ),
     'id'         => 'general-options',
-    'icon'   => 'el el-cogs',
+    'icon'       => 'el el-cogs',
     'fields'     => array(
-
-        array(
-            'id'       => 'google-analytics',
-            'type'     => 'textarea',
-            'title'    => __( 'Google Analytics', 'zazil-lite' ),
-            'subtitle' => __( 'Google Analytics tracking code.', 'zazil-lite' ),
-        ),
         array(
             'id'       => 'logo-image',
             'type'     => 'media',
@@ -130,6 +123,13 @@ Redux::setSection( $opt_name, array(
             'mode'      => 'image',
             'subtitle' => __( 'Upload your logo image.', 'zazil-lite' ),
             'default'  => array( 'url' => get_template_directory_uri() . '/images/mishostudio.png' ),
+        ),
+        array(
+            'id'       => 'google-analytics',
+            'type'     => 'textarea',
+            'title'    => __( 'Google Analytics', 'zazil-lite' ),
+            'subtitle' => __( 'Google Analytics tracking code.', 'zazil-lite' ),
+            'default'  => '',
         ),
     )
 ) );

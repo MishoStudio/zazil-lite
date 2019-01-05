@@ -2,8 +2,8 @@
 Contributors: @mishostudio
 Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, blog, entertainment
 Requires at least: 4.0
-Tested up to: 4.9.8
-Version: 1.0.1
+Tested up to: 5.0.2
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ Note: Images shown in the previews are not included in the Demo Data for protect
 = Unreleased =
 * New Demo Data sliders
 * New Demo Data pages
+
+= 1.0.2 [2019-01-04] =
+* Theme Review Team requirements updated
 
 = 1.0.1 [2018-10-18] =
 * Livemesh widgets compatibility updated

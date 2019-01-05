@@ -10,7 +10,7 @@ global $misho_opt; ?>
 	</div><!-- #content -->
     <footer id="colophon" class="site-footer">
         <div class="site-info">
-            &copy; Copyright 2018. <a href="http://themes.mishostudio.com/downloads/zazil-wordpress-theme/" target="_blank">Zazil Lite</a> by <a href="http://themes.mishostudio.com/" target="_blank">Misho Studio</a>
+            Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>. Theme by <a href="http://themes.mishostudio.com/" target="_blank">Misho Studio</a>.
         </div><!-- .site-info -->
     </footer><!-- #colophon -->
 </div><!-- #page -->
