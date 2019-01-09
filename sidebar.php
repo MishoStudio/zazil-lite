@@ -7,8 +7,10 @@
  * @package zazil-lite
  */
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
+    return;
 } ?>
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+    <div class="container">
+        <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </div>
 </aside><!-- #secondary -->

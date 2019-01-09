@@ -14,6 +14,13 @@ aside {
   }
 }
 
+aside#secondary .container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: $negative_space * 9;
+  margin-bottom: $negative_space * 3;
+}
+
 .page-template-page-fullwidth, .single-download {
   img {
     box-shadow: none !important;

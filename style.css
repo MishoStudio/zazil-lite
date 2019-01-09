@@ -4,7 +4,7 @@ Theme URI: http://themes.mishostudio.com/downloads/zazil-lite/
 Author: Misho Studio
 Author URI: http://themes.mishostudio.com/
 Description: Zazil is a new multipurpose theme that makes use of the latest design trends: bright and vivid colors, gradients, broken grid layout and mobile first. Give your project a clean, fresh and renewed image.
-Version: 1.0.2
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: zazil-lite
@@ -754,6 +754,9 @@ a:hover, a:active {
   transition: background 0.3s; }
   .main-navigation .menu-toggle:hover, .main-navigation .social-search-toggle:hover {
     background: #e5e5e5; }
+.main-navigation .sub-menu a {
+  padding: 1.36rem 1.04rem !important;
+  display: block !important; }
 .main-navigation .menu-toggle {
   display: none; }
 .main-navigation .buttons-container {
@@ -770,14 +773,17 @@ a:hover, a:active {
       font-size: 17.6px;
       font-size: 0.99rem;
       line-height: 2.5 !important; }
+  .main-navigation .buttons-container li .social {
+    max-width: 16rem !important; }
   .main-navigation .buttons-container li .container {
     float: right;
+    text-align: right;
     position: absolute;
     top: 100%;
     right: -999rem;
     z-index: 999;
     background: #eee;
-    width: 20rem;
+    width: 16rem;
     -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35);
     box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.35); }
@@ -801,7 +807,13 @@ a:hover, a:active {
         display: none; }
   .main-navigation .buttons-container li:hover .container {
     right: 0; }
+.main-navigation ul > li > a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 4rem;
+  padding: 0 1.04rem !important; }
 .main-navigation ul li {
+  height: 4rem;
   margin-bottom: 0;
   background: #fff; }
   .main-navigation ul li.page_item_has_children:hover, .main-navigation ul li.menu-item-has-children:hover {
@@ -949,6 +961,12 @@ ul.social-share {
 
 aside .widget .gallery-item {
   margin-bottom: 0; }
+
+aside#secondary .container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7.2rem;
+  margin-bottom: 2.4rem; }
 
 .page-template-page-fullwidth img, .single-download img {
   box-shadow: none !important;

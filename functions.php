@@ -410,36 +410,6 @@ function zazil_lite_register_required_plugins() {
             'slug'      => 'redux-framework',
             'required'  => false,
         ),
-        array(
-            'name'      => 'Page Builder by SiteOrigin',
-            'slug'      => 'siteorigin-panels',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'SiteOrigin Widgets Bundle',
-            'slug'      => 'so-widgets-bundle',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Livemesh SiteOrigin Widgets',
-            'slug'      => 'livemesh-siteorigin-widgets',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Crelly Slider',
-            'slug'      => 'crelly-slider',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Better Font Awesome',
-            'slug'      => 'better-font-awesome',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'One Click Demo Import',
-            'slug'      => 'one-click-demo-import',
-            'required'  => false,
-        ),
     );
 
     $config = array(
@@ -534,46 +504,11 @@ function zazil_lite_about_theme() { ?>
                 </div>
             </div>
             <div class="postbox">
-                <h2 class="hndle"><span><?php esc_html_e( 'Installation: Plugins', 'zazil-lite' ); ?></span></h2>
-                <div class="inside">
-                    <ol>
-                        <li><?php esc_html_e( 'Click Begin Installing Plugins on the notice displayed in the welcome page.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Select all plugins and choose Install on Bulk Actions. Click Apply.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'After install click Return to Required Plugins Installer.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Select all plugins and choose Activate on Bulk Actions. Click Apply.', 'zazil-lite' ); ?></li>
-                        <ol>
-                            <li><?php esc_html_e( 'After activation, Livemesh SiteOrigin Widgets plugin will ask you for tracking data. Choose any.', 'zazil-lite' ); ?></li>
-                            <li><?php esc_html_e( 'Then Livemesh SiteOrigin Widgets plugin will redirect you to its Control Panel.', 'zazil-lite' ); ?></li>
-                            <li><?php esc_html_e( 'Click Activate All Plugin Widgets, click Save Settings and that\'s all.', 'zazil-lite' ); ?></li>
-                        </ol>
-                    </ol>
-                </div>
-            </div>
-            <div class="postbox">
-                <h2 class="hndle"><span><?php esc_html_e( 'Installation: Demo Data', 'zazil-lite' ); ?></span></h2>
-                <div class="inside">
-                    <ol>
-                        <li><?php esc_html_e( 'In your admin panel, go to Appearance > Import Demo Data.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Then click Import Demo Data.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Go to Crelly Slider and click Import Slider.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Select the slider you need according to the demo that you selected.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Go to Settings > Reading choose A Static Page on Your Homepage Displays.', 'zazil-lite' ); ?></li>
-                        <li><?php esc_html_e( 'Set Home for Homepage and Blog for Posts Page and that\'s all.', 'zazil-lite' ); ?></li>
-                    </ol>
-
-                    <b><?php esc_html_e( 'Notes:', 'zazil-lite' ); ?></b>
-                    <ol>
-                        <li><i><?php esc_html_e( 'Images shown in the previews are not included in the Demo Data for protecting against Copyright issues.', 'zazil-lite' ); ?></i></li>
-                        <li><i><?php esc_html_e( 'Download sliders (if not included) from our repository: ', 'zazil-lite' ); ?><a target="_blank" href="https://github.com/MishoStudio/zazil-lite-sliders"><?php esc_html_e( 'https://github.com/MishoStudio/zazil-lite-sliders', 'zazil-lite' ); ?></a></i></li>
-                    </ol>
-                </div>
-            </div>
-            <div class="postbox">
-                <h2 class="hndle"><span><?php esc_html_e( 'Installation Video', 'zazil-lite' ); ?></span></h2>
+                <h2 class="hndle"><span><?php esc_html_e( 'Demostration video', 'zazil-lite' ); ?></span></h2>
                 <div class="inside">
                     <p>
                         <iframe width="100%" height="600px"
-                                src="https://www.youtube.com/embed/iLgRBOgFLs0?rel=0&amp;controls=0&amp;showinfo=0"
+                                src="https://www.youtube.com/embed/KBv7LiPDngs?rel=0&amp;controls=0&amp;showinfo=0"
                                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </p>
                 </div>
@@ -710,32 +645,8 @@ function zazil_lite_about_theme() { ?>
                 </tr>
                 <tr>
                     <td>
-                        <b><?php esc_html_e( '60+ Widgets', 'zazil-lite' ); ?></b><br>
-                        <?php esc_html_e( 'More than sixty widgets to choose from.', 'zazil-lite' ); ?>
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b><?php esc_html_e( 'One Click Install', 'zazil-lite' ); ?></b><br>
-                        <?php esc_html_e( 'Install any of our demos with just one click.', 'zazil-lite' ); ?>
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
                         <b><?php esc_html_e( 'Control Panel', 'zazil-lite' ); ?></b><br>
                         <?php esc_html_e( 'Customize your website using an intuitive interface.', 'zazil-lite' ); ?>
-                    </td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                    <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <b><?php esc_html_e( 'Page Builder', 'zazil-lite' ); ?></b><br>
-                        <?php esc_html_e( 'You just need to drag and drop.', 'zazil-lite' ); ?>
                     </td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
                     <td style="text-align: center"><span class="dashicons dashicons-yes"></span></td>
@@ -752,26 +663,6 @@ function zazil_lite_about_theme() { ?>
     <?php
 }
 add_action( 'admin_menu', 'zazil_lite_about_theme_menu' );
-
-function zazil_lite_ocdi_import_files() {
-    return array(
-        array(
-            'import_file_name'             => 'Demo One',
-            'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/01-one/demo-content.xml',
-            'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/01-one/widgets.json',
-            'local_import_redux'           => array(
-                array(
-                    'file_path'   => trailingslashit( get_template_directory() ) . 'demo/01-one/redux.json',
-                    'option_name' => 'misho_opt',
-                ),
-            ),
-            'import_preview_image_url'     => get_template_directory_uri() . '/demo/01-one/screenshot.png',
-            'import_notice'                => __( 'Don\'t forget to import the <b>Slider One</b> separately using the Crelly Slider plugin.', 'zazil-lite' ),
-            'preview_url'                  => 'http://themes.mishostudio.com/showcase/zazil/zazil-theme-one/',
-        ),
-    );
-}
-add_filter( 'pt-ocdi/import_files', 'zazil_lite_ocdi_import_files' );
 
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 
