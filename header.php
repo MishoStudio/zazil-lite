@@ -23,7 +23,7 @@ global $misho_opt; ?>
 
     if ( $misho_opt[ 'google-analytics' ] != null ) {
         $analytics = $misho_opt[ 'google-analytics' ];
-        echo $analytics;
+        echo "\n" . $analytics;
     }
     ?>
 </head>
